@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # 关键配置：允许旧版依赖解析
+      # 允许旧版依赖解析
       NPM_CONFIG_LEGACY_PEER_DEPS: true
     steps:
       - name: Checkout
@@ -35,9 +35,9 @@ jobs:
         with:
           static_site_generator: next
 
-      # 强制使用 npm ci 安装，并自动读取环境变量中的 legacy-peer-deps
+      # 【修改点】使用 install 而不是 ci，避免严格校验锁文件报错
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build with Next.js
         run: npm run build
