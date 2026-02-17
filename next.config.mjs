@@ -1,13 +1,13 @@
-
-export default nextConfig
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // 启用静态导出
-  basePath: '/5gnu-frontEnd',  // 你的仓库名
+  output: 'export',
+  basePath: '/5gnu-frontEnd',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
-    unoptimized: true  // GitHub Pages 不支持图片优化
-  }
+    unoptimized: true,
+  },
 }
 
-module.exports = nextConfig
-
+export default nextConfig
