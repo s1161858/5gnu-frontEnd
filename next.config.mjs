@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // 必须：告诉 Next.js 导出静态 HTML
-  basePath: '/5gnu-frontEnd', // 必须：你的仓库名作为子路径
+  output: 'export',
+  basePath: '/5gnu-frontEnd',
   images: {
-    unoptimized: true, // 必须：GitHub Pages 不支持 Next.js 的图片优化
+    unoptimized: true,
   },
-  // 可选：确保尾部斜杠，避免刷新 404
   trailingSlash: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig; // 注意这里变成了 export default
