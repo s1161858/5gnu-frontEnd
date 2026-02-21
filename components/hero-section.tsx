@@ -62,7 +62,7 @@ export function HeroSection() {
       >
         <div className="relative h-[380px] w-[280px] md:h-[520px] md:w-[380px]">
           <Image
-            src="/images/robot-fullbody.jpg"
+            src="/5gnu-frontEnd/images/robot-fullbody.jpg"
             alt="BOOSTER K1 humanoid robot full body view"
             fill
             className="object-contain"

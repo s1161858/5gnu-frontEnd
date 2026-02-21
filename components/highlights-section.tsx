@@ -12,7 +12,7 @@ const bentoCards = [
       "Powered by NVIDIA Jetson Orin NX 8GB processor, delivering 117 TOPS of AI computing power for running complex perception models and decision-making algorithms directly on-device.",
     span: "lg:col-span-2 lg:row-span-2",
     size: "large" as const,
-    image: "/images/robot-closeup.jpg",
+    image: "/5gnu-frontEnd/images/robot-closeup.jpg",
     imageAlt: "Close-up of BOOSTER K1 robot torso showing Booster Robotics branding",
   },
   {

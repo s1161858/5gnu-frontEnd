@@ -84,7 +84,7 @@ export function SpecsSection() {
           <FadeIn delay={0.3} direction="right" className="lg:col-span-2">
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl bg-card ring-1 ring-border">
               <Image
-                src="/images/robot-companion.jpg"
+                src="/5gnu-frontEnd/images/robot-companion.jpg"
                 alt="BOOSTER K1 humanoid robot interacting with children"
                 fill
                 className="object-cover"

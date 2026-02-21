@@ -9,7 +9,7 @@ const features = [
     subtitle: "Learning reimagined.",
     description:
       "BOOSTER K1 brings robotics and AI education to life. Designed for classrooms, labs, and research centers, it engages students with hands-on interaction, making complex STEM concepts tangible and exciting.",
-    image: "/images/robot-classroom.jpg",
+    image: "/5gnu-frontEnd/images/robot-classroom.jpg",
     imageAlt: "BOOSTER K1 robot teaching children in a classroom setting",
   },
   {
@@ -17,7 +17,7 @@ const features = [
     subtitle: "Built to connect.",
     description:
       "With natural voice interaction through its microphone array and speaker, plus expressive movement across 22 degrees of freedom, K1 creates genuine engagement. Children and researchers alike find a responsive, intuitive partner.",
-    image: "/images/robot-kids-playing.jpg",
+    image: "/5gnu-frontEnd/images/robot-kids-playing.jpg",
     imageAlt: "Children playing and interacting with the BOOSTER K1 robot",
   },
   {
@@ -25,7 +25,7 @@ const features = [
     subtitle: "Your code. Your robot.",
     description:
       "Fully programmable with ROS 2 compatibility, providing interfaces for low-level joints and sensors as well as high-level motion controls. Supports simulation environments like Isaac Sim, plus a mobile app for network configuration and remote control.",
-    image: "/images/robot-learning.jpg",
+    image: "/5gnu-frontEnd/images/robot-learning.jpg",
     imageAlt: "BOOSTER K1 robot assisting a child with studying at a desk",
   },
 ];
