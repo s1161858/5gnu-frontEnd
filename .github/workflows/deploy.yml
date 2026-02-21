@@ -1,8 +1,8 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -11,15 +11,14 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # 允许旧版依赖解析
-      NPM_CONFIG_LEGACY_PEER_DEPS: true
+      NPM_CONFIG_LEGACY_PEER_DEPS: true   # 解决 React 19 兼容性问题
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,25 +26,22 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: 'npm'
+          node-version: 20
+          cache: npm
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
 
-      # 【修改点】使用 install 而不是 ci，避免严格校验锁文件报错
       - name: Install dependencies
-        run: npm install
+        run: npm install          # 用 install 而非 ci，避免 lock 文件不同步报错
 
-      - name: Build with Next.js
+      - name: Build
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./out             # Next.js 静态导出路径
 
   deploy:
     environment:
