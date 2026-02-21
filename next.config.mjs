@@ -3,8 +3,8 @@ const repo = '5gnu-frontEnd' // ← 替换这里
 
 const nextConfig = {
   output: 'export',           // 生成静态 HTML 到 out/
-  basePath: `/${repo}`,       // GitHub Pages 子路径
-  assetPrefix: `/${repo}/`,   // 静态资源前缀
+  basePath: '5gnu-frontEnd'     // 子路径
+  assetPrefix: '/5gnu-frontEnd/',   // 静态资源前缀
   images: {
     unoptimized: true,        // GitHub Pages 不支持 Next.js 图片优化
   },
